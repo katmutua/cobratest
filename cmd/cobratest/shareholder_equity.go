@@ -3,18 +3,18 @@ package cobratest
 import (
 	"fmt"
 
-	"github.com/spf13/cobra"
 	"github.com/katmutua/cobratest/pkg/cobratest"
+	"github.com/spf13/cobra"
 )
 
 var equityCmd = &cobra.Command{
-	Use:   "equity",
+	Use:     "equity",
 	Aliases: []string{"eq"},
-	Short: "Shows how to calculate the shareholder equity",
-	Long:  "Shows a complete formula on how to calculate the shareholder equity",
-	Args:  cobra.ExactArgs(1),
+	Short:   "Shows how to calculate the shareholder equity",
+	Long:    "Shows a complete formula on how to calculate the shareholder equity",
+	Args:    cobra.ExactArgs(0),
 	Run: func(cmd *cobra.Command, args []string) {
-		result := cobratest.shareHolderEquity(args[0])
+		result := cobratest.ShareHolderEquity()
 		fmt.Println(result)
 	},
 }

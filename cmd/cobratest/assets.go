@@ -8,16 +8,17 @@ import (
 )
 
 var assetsCmd = &cobra.Command{
-	Use: "assets", 
+	Use:     "assets",
 	Aliases: []string{"as"},
-	Short: "", 
-	Long: "",
-	Args: cobra.ExactArgs(1),
+	Short:   "",
+	Long:    "",
+	Args:    cobra.ExactArgs(0),
 	Run: func(cmd *cobra.Command, args []string) {
-		result := cobratest.assets(args[0])
+		result := cobratest.Assets()
 		fmt.Println(result)
 	},
 }
-func init()  {
+
+func init() {
 	rootCmd.AddCommand(assetsCmd)
 }

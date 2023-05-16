@@ -8,15 +8,16 @@ import (
 )
 
 var totalLiabilities = &cobra.Command{
-	Use: "totalLiabilities",
+	Use:     "totalLiabilities",
 	Aliases: []string{"tl"},
-	Args: cobra.ExactArgs(1),
+	Args:    cobra.ExactArgs(0),
 	Run: func(cmd *cobra.Command, args []string) {
-		value := args[0]
-		result := cobratest.totalLiabilities(value)
+		// value := args[0]
+		result := cobratest.TotalLiabilities()
 		fmt.Println(result)
 	},
 }
+
 func init() {
 	rootCmd.AddCommand(totalLiabilities)
 }
